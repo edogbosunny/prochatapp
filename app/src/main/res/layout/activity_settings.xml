@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorChatBg1"
+    tools:context="com.example.crystaldave.chatapp.activities.SettingsActivity">
+
+
+
+    <include layout="@layout/loading_panel" android:id="@+id/settings_loadingPanel"></include>
+
+    <ScrollView
+        android:id="@+id/settings_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
+
+                <ImageView
+                    android:id="@+id/settings_image"
+                    android:layout_width="match_parent"
+                    android:src="@drawable/user2"
+                    android:layout_alignParentTop="true"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/settings_changeImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    app:fabSize="mini"
+                    android:src="@drawable/ic_edit"
+                    android:layout_alignBottom="@+id/settings_image"
+                    android:layout_alignEnd="@+id/settings_image"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:backgroundTint="@color/colorSpecial" />
+
+                <TextView
+                    android:id="@+id/settings_username"
+                    android:text="Username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/gradient_bg"
+                    android:textSize="24sp"
+                    android:textColor="@color/colorText1"
+                    android:paddingLeft="45dp"
+                    android:paddingBottom="10dp"
+                    android:layout_alignBottom="@+id/settings_image"
+                    android:layout_alignRight="@+id/settings_image" />
+
+                <TextView
+                    android:id="@+id/myStatus"
+                    android:text="My Status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp"
+                    android:textColor="@color/colorSpecial"
+                    android:layout_below="@id/settings_image"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/settings_status"
+                    android:text="Hi there, I'm using Propius ..;)"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#838383"
+                    android:layout_below="@id/myStatus"
+                    android:layout_marginBottom="45dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp"
+                    android:padding="10dp"
+                    android:fontFamily="casual"
+                    android:minLines="2"
+                    android:background="@drawable/message_text_bg_c"
+                    />
+
+                <ImageButton
+                    android:id="@+id/settings_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_edit_black_18px"
+                    android:layout_alignBottom="@id/myStatus"
+                    android:layout_toEndOf="@+id/myStatus"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@android:color/transparent" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
